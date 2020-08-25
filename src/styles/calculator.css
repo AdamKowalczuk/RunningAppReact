@@ -1,0 +1,30 @@
+.calculator_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.calculator_title {
+  margin-top: 10vh;
+  width: 600px;
+  height: 100px;
+  background-color: red;
+  border-bottom: 2px solid white;
+}
+.calculator_title h2 {
+  margin: 0 25;
+}
+.calculator_body {
+  width: 600px;
+  height: 400px;
+  background-color: green;
+}
+.calculator_body input {
+  width: 80%;
+  background: white;
+  font-weight: bold;
+}
+.calculator_body input::placeholder {
+  font-weight: bold;
+  text-align: center;
+}

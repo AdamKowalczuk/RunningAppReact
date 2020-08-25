@@ -2,10 +2,11 @@ import React from "react";
 import { Router } from "@reach/router";
 import logo from "./logo.svg";
 import Home from "./pages/Home.js";
+import BMI from "./pages/BMI.js";
 import Calculator from "./pages/Calculator.js";
 import PaceConverter from "./pages/PaceConverter.js";
 import ResponsiveNavigation from "./components/ResponsiveNavigation";
-import "./App.css";
+import "./styles/App.css";
 
 function App() {
   const navLinks = [
@@ -24,6 +25,11 @@ function App() {
       path: "/przelicznik",
       icon: "fas fa-exchange-alt",
     },
+    {
+      text: "BMI",
+      path: "/bmi",
+      icon: "fas fa-balance-scale-right",
+    },
   ];
 
   return (
@@ -39,6 +45,7 @@ function App() {
         <Home exact path="/" />
         <Calculator path="/kalkulator-tempa-biegu" />
         <PaceConverter path="/przelicznik" />
+        <BMI path="/bmi" />
       </Router>
     </div>
   );
