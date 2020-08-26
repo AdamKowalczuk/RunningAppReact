@@ -34,9 +34,6 @@ font-style: italic; */
   font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
   margin-right: 20vw;
   margin-left: 20vw;
-  font-family: adobe-garamond-pro, serif;
-  font-weight: 700;
-  font-style: normal;
 }
 @media screen and (max-width: 759px) {
   .quotes-container {
@@ -51,7 +48,7 @@ font-style: italic; */
 h3 {
   font-family: adobe-garamond-pro, serif;
   font-size: 42px;
-  font-style: italic;
+  font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
   line-height: 52.6300010681152px;
