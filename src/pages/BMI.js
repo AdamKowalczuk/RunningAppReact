@@ -38,19 +38,25 @@ export default class BMI extends Component {
           </div>
 
           <div className="calculator_body">
-            <div className="box">
-              <h3>Wzrost</h3>
+            <h3>Wzrost</h3>
 
-              <div className="input-container">
-                <input type="text" onChange={this.heightHandleChange} />
-                <label>Cm</label>
-              </div>
+            <div className="input-container">
+              <input
+                type="text"
+                onChange={this.heightHandleChange}
+                placeholder="&nbsp;"
+              />
+              <label>Cm</label>
+            </div>
 
-              <h3>Waga</h3>
-              <div className="input-container">
-                <input type="text" onChange={this.weightHandleChange} />
-                <label>Kg</label>
-              </div>
+            <h3>Waga</h3>
+            <div className="input-container">
+              <input
+                type="text"
+                onChange={this.weightHandleChange}
+                placeholder="&nbsp;"
+              />
+              <label>Kg</label>
             </div>
 
             <br />

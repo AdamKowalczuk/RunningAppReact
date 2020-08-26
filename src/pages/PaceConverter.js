@@ -25,18 +25,27 @@ export default class PaceConverter extends Component {
             <h2>Zamiana km na mile/mil na km</h2>
           </div>
 
-          <div className="calculator_body">
-            <input
-              type="text"
-              placeholder="km"
-              onChange={this.handleChangeKm}
-            />
+          <div className="calculator_body" style={{ paddingTop: "20px" }}>
+            <div className="input-container">
+              <input
+                type="text"
+                placeholder="&nbsp;"
+                onChange={this.handleChangeKm}
+              />
+              <label>Km</label>
+            </div>
+
             <p>{this.state.km} km</p>
-            <input
-              type="text"
-              placeholder="mile"
-              onChange={this.handleChangeMile}
-            />
+
+            <div className="input-container">
+              <input
+                type="text"
+                placeholder="&nbsp;"
+                onChange={this.handleChangeMile}
+              />
+              <label>Mile</label>
+            </div>
+
             <p>{this.state.mile} mile</p>
             <hr />
             <p>1 km - 1.61 mil</p>
