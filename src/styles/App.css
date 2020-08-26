@@ -5,15 +5,61 @@
 }
 html {
   background-color: #0b1930;
+  /* font-family: adobe-garamond-pro, serif;
+font-weight: 700;
+font-style: normal;
+Adobe Garamond Pro Bold Italic
+font-family: adobe-garamond-pro, serif;
+font-weight: 700;
+font-style: italic;
+Adobe Garamond Pro Italic
+font-family: adobe-garamond-pro, serif;
+font-weight: 400;
+font-style: italic;
+Adobe Garamond Pro Regular
+font-family: adobe-garamond-pro, serif;
+font-weight: 400;
+font-style: normal;
+Adobe Garamond Pro Semibold
+font-family: adobe-garamond-pro, serif;
+font-weight: 600;
+font-style: normal;
+Adobe Garamond Pro Semibold Italic
+font-family: adobe-garamond-pro, serif;
+font-weight: 600;
+font-style: italic; */
 }
 .quotes-container {
-  margin-top: 30vh;
+  margin-top: 20vh;
   font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
   margin-right: 20vw;
   margin-left: 20vw;
+  font-family: adobe-garamond-pro, serif;
+  font-weight: 700;
+  font-style: normal;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 759px) {
   .quotes-container {
     margin-top: 10vh;
   }
+}
+.quotes-container h1 {
+  font-family: adobe-garamond-pro, serif;
+  font-weight: 700;
+  font-style: normal;
+}
+h3 {
+  font-family: adobe-garamond-pro, serif;
+  font-size: 42px;
+  font-style: italic;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 52.6300010681152px;
+  text-transform: none;
+  color: #13e2ca;
+}
+h5 {
+  font-family: adobe-garamond-pro, serif;
+  font-weight: 700;
+  font-style: normal;
 }
