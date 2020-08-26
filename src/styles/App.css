@@ -1,7 +1,14 @@
 .App {
   text-align: center;
   margin: 0 auto;
+  color: #fff;
 }
 html {
-  background-color: #342b57;
+  background-color: #0b1930;
+}
+.quotes-container {
+  margin-top: 30vh;
+  font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
+  margin-right: 20vw;
+  margin-left: 20vw;
 }

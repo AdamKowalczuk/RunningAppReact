@@ -5,6 +5,7 @@ import Home from "./pages/Home.js";
 import BMI from "./pages/BMI.js";
 import Calculator from "./pages/Calculator.js";
 import PaceConverter from "./pages/PaceConverter.js";
+import Cytaty from "./pages/Cytaty.js";
 import ResponsiveNavigation from "./components/ResponsiveNavigation";
 import "./styles/App.css";
 
@@ -30,6 +31,11 @@ function App() {
       path: "/bmi",
       icon: "fas fa-balance-scale-right",
     },
+    {
+      text: "Cytaty",
+      path: "/cytaty",
+      icon: "fas fa-quote-right",
+    },
   ];
 
   return (
@@ -37,15 +43,17 @@ function App() {
       <ResponsiveNavigation
         navLinks={navLinks}
         logo={logo}
-        background="#CF395F"
-        hoverBackground="#342b57"
+        background="#4905c7"
+        hoverBackground="#fff"
         linkColor="#fff"
+        colorText="#4905c7"
       />
       <Router>
         <Home exact path="/" />
         <Calculator path="/kalkulator-tempa-biegu" />
         <PaceConverter path="/przelicznik" />
         <BMI path="/bmi" />
+        <Cytaty path="/cytaty" />
       </Router>
     </div>
   );

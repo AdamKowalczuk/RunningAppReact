@@ -52,7 +52,9 @@ export default class BMI extends Component {
               onChange={this.weightHandleChange}
             />
             <br />
-            <button onClick={this.handleClick}>Sprawdź</button>
+            <button className="btn btn-green" onClick={this.handleClick}>
+              Sprawdź
+            </button>
             <p>{message}</p>
 
             {((props) => {

@@ -7,6 +7,7 @@ function ResponsiveNavigation({
   linkColor,
   navLinks,
   logo,
+  colorText,
 }) {
   const [navOpen, setNavOpen] = useState(0);
   const [hoverIndex, setHoverIndex] = useState(-1);
@@ -37,10 +38,20 @@ function ResponsiveNavigation({
               background: hoverIndex === index ? hoverBackground || "#999" : "",
             }}
           >
-            <Link to={link.path} style={{ color: linkColor }}>
+            <Link
+              to={link.path}
+              style={{
+                color: hoverIndex === index ? colorText || "#999" : "",
+              }}
+            >
               {" "}
               {link.text}
-              <i className={link.icon} />
+              <i
+                className={link.icon}
+                style={{
+                  color: hoverIndex === index ? colorText || "#999" : "",
+                }}
+              />
             </Link>
           </li>
         ))}

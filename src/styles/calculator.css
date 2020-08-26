@@ -7,8 +7,7 @@
 .calculator_title {
   margin-top: 10vh;
   width: 600px;
-  height: 100px;
-  background-color: red;
+  background-color: #4905c7;
   border-bottom: 2px solid white;
 }
 .calculator_title h2 {
@@ -16,8 +15,7 @@
 }
 .calculator_body {
   width: 600px;
-  height: 400px;
-  background-color: green;
+  background-color: #4905c7;
 }
 .calculator_body input {
   width: 80%;
@@ -27,4 +25,26 @@
 .calculator_body input::placeholder {
   font-weight: bold;
   text-align: center;
+}
+.btn {
+  margin-top: 20px;
+  padding: 12px 18px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: border 0.3s ease-out, color 0.3s ease-out,
+    background 0.3s ease-out;
+  text-transform: uppercase;
+}
+.btn-green {
+  color: #13e2ca;
+  border: 3px solid #13e2ca;
+  border-radius: 8px;
+  background: rgba(19, 226, 202, 0);
+}
+.btn-green:hover {
+  background: #13e2ca;
+  color: #4905c7;
 }
