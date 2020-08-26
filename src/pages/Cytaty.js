@@ -60,7 +60,6 @@ export default class Cytaty extends Component {
     const random = Math.floor(
       Math.random() * this.state.quotesCollecton.length
     );
-    console.log(random);
     this.setState({
       quotes: this.state.quotesCollecton[random],
       author: this.state.authorCollection[random],

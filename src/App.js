@@ -8,6 +8,9 @@ import PaceConverter from "./pages/PaceConverter.js";
 import Cytaty from "./pages/Cytaty.js";
 import ResponsiveNavigation from "./components/ResponsiveNavigation";
 import "./styles/App.css";
+import "./styles/calculator.css";
+import "./styles/button.css";
+import "./styles/input.css";
 
 function App() {
   const navLinks = [

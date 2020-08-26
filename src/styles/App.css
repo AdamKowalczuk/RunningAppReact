@@ -5,29 +5,12 @@
 }
 html {
   background-color: #0b1930;
-  /* font-family: adobe-garamond-pro, serif;
-font-weight: 700;
-font-style: normal;
-Adobe Garamond Pro Bold Italic
-font-family: adobe-garamond-pro, serif;
-font-weight: 700;
-font-style: italic;
-Adobe Garamond Pro Italic
-font-family: adobe-garamond-pro, serif;
-font-weight: 400;
-font-style: italic;
-Adobe Garamond Pro Regular
-font-family: adobe-garamond-pro, serif;
-font-weight: 400;
-font-style: normal;
-Adobe Garamond Pro Semibold
-font-family: adobe-garamond-pro, serif;
-font-weight: 600;
-font-style: normal;
-Adobe Garamond Pro Semibold Italic
-font-family: adobe-garamond-pro, serif;
-font-weight: 600;
-font-style: italic; */
+  font-family: "Open Sans", sans-serif;
+
+  /* font-family: 'Open Sans', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif; */
 }
 .quotes-container {
   margin-top: 20vh;
@@ -41,14 +24,19 @@ font-style: italic; */
   }
 }
 .quotes-container h1 {
-  font-family: adobe-garamond-pro, serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 h3 {
-  font-family: adobe-garamond-pro, serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+}
+.quotes-container h3 {
+  font-family: "Oswald", sans-serif;
   font-size: 42px;
-  font-style: normal;
+  font-style: italic;
   font-weight: normal;
   letter-spacing: normal;
   line-height: 52.6300010681152px;
@@ -56,7 +44,7 @@ h3 {
   color: #13e2ca;
 }
 h5 {
-  font-family: adobe-garamond-pro, serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-style: normal;
 }

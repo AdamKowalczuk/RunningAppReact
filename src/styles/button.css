@@ -1,0 +1,22 @@
+.btn {
+  margin-top: 20px;
+  padding: 12px 18px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: border 0.3s ease-out, color 0.3s ease-out,
+    background 0.3s ease-out;
+  text-transform: uppercase;
+}
+.btn-green {
+  color: #13e2ca;
+  border: 3px solid #13e2ca;
+  border-radius: 8px;
+  background: rgba(19, 226, 202, 0);
+}
+.btn-green:hover {
+  background: #13e2ca;
+  color: #4905c7;
+}

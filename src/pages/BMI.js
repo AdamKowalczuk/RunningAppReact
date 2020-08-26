@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "../styles/calculator.css";
 
 export default class BMI extends Component {
   state = {
@@ -39,18 +38,21 @@ export default class BMI extends Component {
           </div>
 
           <div className="calculator_body">
-            <h3>Wzrost</h3>
-            <input
-              type="text"
-              placeholder="Cm"
-              onChange={this.heightHandleChange}
-            />
-            <h3>Waga</h3>
-            <input
-              type="text"
-              placeholder="Kg"
-              onChange={this.weightHandleChange}
-            />
+            <div className="box">
+              <h3>Wzrost</h3>
+
+              <div className="input-container">
+                <input type="text" onChange={this.heightHandleChange} />
+                <label>Cm</label>
+              </div>
+
+              <h3>Waga</h3>
+              <div className="input-container">
+                <input type="text" onChange={this.weightHandleChange} />
+                <label>Kg</label>
+              </div>
+            </div>
+
             <br />
             <button className="btn btn-green" onClick={this.handleClick}>
               Sprawdź
@@ -59,24 +61,40 @@ export default class BMI extends Component {
 
             {((props) => {
               if (this.state.result < 18.5 && this.state.result > 0) {
-                return <div>Masz niedowagę</div>;
+                return (
+                  <div className="bmi-result" style={{ color: "yellow" }}>
+                    Masz niedowagę
+                  </div>
+                );
               } else if (this.state.result >= 18.5 && this.state.result < 25) {
                 return (
-                  <div>
+                  <div className="bmi-result" style={{ color: "lime" }}>
                     Gratuluję !
                     <br />
                     Masz prawidłową wagę
                   </div>
                 );
               } else if (this.state.result >= 25 && this.state.result < 30) {
-                return <div>Masz nadwagę</div>;
+                return (
+                  <div className="bmi-result" style={{ color: "gold" }}>
+                    Masz nadwagę
+                  </div>
+                );
               } else if (this.state.result >= 30 && this.state.result < 35) {
-                return <div>Masz otyłość I stopnia !</div>;
+                return (
+                  <div className="bmi-result" style={{ color: "orange" }}>
+                    Masz otyłość I stopnia !
+                  </div>
+                );
               } else if (this.state.result >= 35 && this.state.result < 40) {
-                return <div>Masz otyłość II stopnia !</div>;
+                return (
+                  <div className="bmi-result" style={{ color: "darkorange" }}>
+                    Masz otyłość II stopnia !
+                  </div>
+                );
               } else if (this.state.result >= 40) {
                 return (
-                  <div>
+                  <div className="bmi-result" style={{ color: "red" }}>
                     Masz skrajną otyłość!
                     <br />
                     Musisz zacząć dbać o siebie

@@ -66,7 +66,9 @@ export default class Calculator extends Component {
             />
             <p>{this.state.seconds}</p>
             <br />
-            <button onClick={this.handleClick}>Oblicz</button>
+            <button className="btn btn-green" onClick={this.handleClick}>
+              Oblicz
+            </button>
             <p>{this.state.totalTime}</p>
             <table style={{ width: "100%" }}>
               <tr>
