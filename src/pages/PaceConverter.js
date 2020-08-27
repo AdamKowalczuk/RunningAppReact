@@ -8,7 +8,7 @@ export default class PaceConverter extends Component {
   handleChangeKm = (e) => {
     this.setState({
       km: e.target.value,
-      mile: (e.target.value * 1.609344).toFixed(2),
+      mile: (e.target.value / 1.609344).toFixed(2),
     });
   };
   handleChangeMile = (e) => {
