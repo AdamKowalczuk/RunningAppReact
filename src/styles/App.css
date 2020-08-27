@@ -18,16 +18,6 @@ font-family: 'Roboto', sans-serif; */
   margin-right: 20vw;
   margin-left: 20vw;
 }
-@media screen and (max-width: 759px) {
-  .quotes-container {
-    margin-top: 10vh;
-  }
-}
-.quotes-container h1 {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
 h3 {
   font-family: "Oswald", sans-serif;
   font-weight: normal;
@@ -47,4 +37,48 @@ h5 {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-style: normal;
+  font-size: 20px;
+}
+@media screen and (max-width: 759px) {
+  .quotes-container {
+    margin-top: 10vh;
+    margin-left: 80px;
+    margin-right: 20px;
+  }
+  .quotes-container h1 {
+    font-size: 24px;
+  }
+
+  .quotes-container h3 {
+    font-size: 26px;
+    line-height: 40px;
+  }
+  .quotes-container h5 {
+    font-size: 18px;
+  }
+}
+.quotes-container h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.home-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 80px;
+  margin-right: 20px;
+}
+
+.home-container h1 {
+  font-size: calc(40px + (80 - 40) * ((100vw - 300px) / (1600 - 300)));
+}
+.home-img {
+  width: calc(70px + (200 - 70) * ((100vw - 300px) / (1600 - 300)));
+  height: 200px;
+  margin: 0 auto;
 }

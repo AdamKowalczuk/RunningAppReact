@@ -91,7 +91,7 @@ export default class Calculator extends Component {
             >
               Oblicz
             </button>
-            <table style={{ width: "100%" }}>
+            <table style={{ width: "100%", marginBottom: "20px" }}>
               <tr>
                 <th>Dystans</th>
                 <th>Przewidywany czas na mecie</th>

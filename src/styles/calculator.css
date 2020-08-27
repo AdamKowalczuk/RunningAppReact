@@ -25,3 +25,30 @@
 .bmi-result {
   margin-bottom: 20px;
 }
+@media screen and (max-width: 759px) {
+  .calculator_title {
+    margin-left: 80px;
+    margin-right: 20px;
+    margin-top: 10vh;
+    width: 70%;
+    background-color: #4905c7;
+    border-bottom: 2px solid white;
+  }
+  .calculator_title h2 {
+    margin: 0 25;
+  }
+  .calculator_body {
+    margin-left: 80px;
+    margin-right: 20px;
+    width: 70%;
+    background-color: #4905c7;
+  }
+
+  .calculator_body input::placeholder {
+    font-weight: bold;
+    text-align: center;
+  }
+  .bmi-result {
+    margin-bottom: 20px;
+  }
+}
