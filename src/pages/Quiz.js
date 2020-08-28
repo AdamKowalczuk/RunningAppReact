@@ -334,7 +334,7 @@ export default class Quiz extends Component {
     return (
       <>
         {this.state.number < 11 ? (
-          <div className="calculator_container">
+          <div className="quiz-container">
             <h1>Quiz o bieganiu</h1>
 
             <h3>Pytanie {this.state.number}/10</h3>
