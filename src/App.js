@@ -6,6 +6,7 @@ import BMI from "./pages/BMI.js";
 import Calculator from "./pages/Calculator.js";
 import PaceConverter from "./pages/PaceConverter.js";
 import Cytaty from "./pages/Cytaty.js";
+import Quiz from "./pages/Quiz.js";
 import ResponsiveNavigation from "./components/ResponsiveNavigation";
 import "./styles/App.css";
 import "./styles/calculator.css";
@@ -22,7 +23,7 @@ function App() {
     {
       text: "Kalkulator tempa biegu",
       path: "/kalkulator-tempa-biegu",
-      icon: "ion-ios-calculator",
+      icon: "fas fa-calculator",
     },
     {
       text: "Przelicznik",
@@ -38,6 +39,11 @@ function App() {
       text: "Cytaty",
       path: "/cytaty",
       icon: "fas fa-quote-right",
+    },
+    {
+      text: "Quiz",
+      path: "/quiz",
+      icon: "fas fa-atlas",
     },
   ];
 
@@ -57,6 +63,7 @@ function App() {
         <PaceConverter path="/przelicznik" />
         <BMI path="/bmi" />
         <Cytaty path="/cytaty" />
+        <Quiz path="/quiz" />
       </Router>
     </div>
   );

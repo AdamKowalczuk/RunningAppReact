@@ -56,6 +56,9 @@ h5 {
   .quotes-container h5 {
     font-size: 18px;
   }
+  .home-container {
+    margin-top: 10px;
+  }
 }
 .quotes-container h1 {
   font-family: "Open Sans", sans-serif;
