@@ -354,12 +354,14 @@ export default class Quiz extends Component {
           </div>
         ) : (
           <>
-            <h1>
-              Gratuluję!
-              <br />
-              Twój wynik to:
-            </h1>
-            <h3>{this.state.score}/10</h3>
+            <div className="quiz-result">
+              <h1>
+                Gratuluję!
+                <br />
+                Twój wynik to:
+              </h1>
+              <h3>{this.state.score}/10</h3>
+            </div>
           </>
         )}
       </>
