@@ -63,9 +63,14 @@
 }
 @media screen and (max-width: 759px) {
   .quiz-container {
-    margin-top: 5%;
+    margin-top: 10%;
     margin-left: 80px;
     margin-right: 20px;
+    font-size: 0.8rem;
+  }
+  .quiz-container button {
+    margin-top: 0.6rem;
+    padding: 6px 9px;
   }
 }
 .quiz-result {
