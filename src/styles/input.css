@@ -6,9 +6,10 @@
 
 .input-container {
   position: relative;
-  margin-bottom: 25px;
+
   width: 40%;
   margin: 0 auto;
+  margin-bottom: 25px;
 }
 .input-container label {
   position: absolute;

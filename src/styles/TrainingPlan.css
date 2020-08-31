@@ -1,0 +1,53 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". . . . . . ." ". . . . . . ." ". . . . . . ." ". . . . . . ." ". . . . . . .";
+}
+.DayOfTheWeek-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". . . . . . .";
+  margin-bottom: 1px;
+  margin-top: 20px;
+}
+.day {
+  width: 8vw;
+  height: 8vw;
+  background-color: #4905c7;
+  color: white;
+  text-align: center;
+}
+.day-height {
+  height: auto;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.done {
+  background-color: #4905c7;
+  width: 8vw;
+  height: 8vw;
+  color: white;
+  text-align: center;
+  background-image: url("/images/completed2.svg");
+  background-size: contain;
+}
+@media screen and (max-width: 759px) {
+  .day {
+    width: 10vw;
+    height: 10vw;
+  }
+  .day-height {
+    height: auto;
+  }
+  .done {
+    width: 10vw;
+    height: 10vw;
+  }
+  .grid-container p {
+    margin: 0;
+  }
+}

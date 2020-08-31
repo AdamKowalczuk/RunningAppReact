@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class Cytaty extends Component {
+export default class Quotes extends Component {
   state = {
     quotesCollecton: [
       `"Maraton zaczyna się na 32. kilometrze."`,

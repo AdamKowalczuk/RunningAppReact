@@ -92,270 +92,289 @@ export default class Calculator extends Component {
               Oblicz
             </button>
             <table style={{ width: "100%", marginBottom: "20px" }}>
-              <tr>
-                <th>Dystans</th>
-                <th>Przewidywany czas na mecie</th>
-              </tr>
-              <tr>
-                <td>1km</td>
-                <td>
-                  {Math.floor(this.state.totalTime / this.state.km / 3600) < 10
-                    ? "0" +
-                      Math.floor(this.state.totalTime / this.state.km / 3600)
-                    : Math.floor(this.state.totalTime / this.state.km / 3600)}
-                  :
-                  {(
-                    ((this.state.totalTime / this.state.km) % 3600) /
-                    60
-                  ).toFixed(0) < 10
-                    ? "0" +
-                      (
-                        ((this.state.totalTime / this.state.km) % 3600) /
-                        60
-                      ).toFixed(0)
-                    : (
-                        ((this.state.totalTime / this.state.km) % 3600) /
-                        60
-                      ).toFixed(0)}
-                  :
-                  {(
-                    ((this.state.totalTime / this.state.km) % 3600) %
-                    60
-                  ).toFixed(0) < 10
-                    ? "0" +
-                      (
-                        ((this.state.totalTime / this.state.km) % 3600) %
-                        60
-                      ).toFixed(0)
-                    : (
-                        ((this.state.totalTime / this.state.km) % 3600) %
-                        60
-                      ).toFixed(0)}
-                </td>
-              </tr>
-              <tr>
-                <td>3km</td>
-                <td>
-                  {Math.floor(
-                    (this.state.totalTime * 3) / this.state.km / 3600
-                  ) < 10
-                    ? "0" +
-                      Math.floor(
-                        (this.state.totalTime * 3) / this.state.km / 3600
-                      )
-                    : Math.floor(
-                        (this.state.totalTime * 3) / this.state.km / 3600
-                      )}
-                  :
-                  {(
-                    (((this.state.totalTime * 3) / this.state.km) % 3600) /
-                    60
-                  ).toFixed(0) < 10
-                    ? "0" +
-                      (
-                        (((this.state.totalTime * 3) / this.state.km) % 3600) /
-                        60
-                      ).toFixed(0)
-                    : (
-                        (((this.state.totalTime * 3) / this.state.km) % 3600) /
-                        60
-                      ).toFixed(0)}
-                  :
-                  {(
-                    (((this.state.totalTime * 3) / this.state.km) % 3600) %
-                    60
-                  ).toFixed(0) < 10
-                    ? "0" +
-                      (
-                        (((this.state.totalTime * 3) / this.state.km) % 3600) %
-                        60
-                      ).toFixed(0)
-                    : (
-                        (((this.state.totalTime * 3) / this.state.km) % 3600) %
-                        60
-                      ).toFixed(0)}
-                </td>
-              </tr>
-              <tr>
-                <td>5km</td>
-                <td>
-                  {Math.floor(
-                    (this.state.totalTime * 5) / this.state.km / 3600
-                  ) < 10
-                    ? "0" +
-                      Math.floor(
-                        (this.state.totalTime * 5) / this.state.km / 3600
-                      )
-                    : Math.floor(
-                        (this.state.totalTime * 5) / this.state.km / 3600
-                      )}
-                  :
-                  {(
-                    (((this.state.totalTime * 5) / this.state.km) % 3600) /
-                    60
-                  ).toFixed(0) < 10
-                    ? "0" +
-                      (
-                        (((this.state.totalTime * 5) / this.state.km) % 3600) /
-                        60
-                      ).toFixed(0)
-                    : (
-                        (((this.state.totalTime * 5) / this.state.km) % 3600) /
-                        60
-                      ).toFixed(0)}
-                  :
-                  {(
-                    (((this.state.totalTime * 5) / this.state.km) % 3600) %
-                    60
-                  ).toFixed(0) < 10
-                    ? "0" +
-                      (
-                        (((this.state.totalTime * 5) / this.state.km) % 3600) %
-                        60
-                      ).toFixed(0)
-                    : (
-                        (((this.state.totalTime * 5) / this.state.km) % 3600) %
-                        60
-                      ).toFixed(0)}
-                </td>
-              </tr>
-              <tr>
-                <td>10km</td>
-                <td>
-                  {Math.floor(
-                    (this.state.totalTime * 10) / this.state.km / 3600
-                  ) < 10
-                    ? "0" +
-                      Math.floor(
-                        (this.state.totalTime * 10) / this.state.km / 3600
-                      )
-                    : Math.floor(
-                        (this.state.totalTime * 10) / this.state.km / 3600
-                      )}
-                  :
-                  {(
-                    (((this.state.totalTime * 10) / this.state.km) % 3600) /
-                    60
-                  ).toFixed(0) < 10
-                    ? "0" +
-                      (
-                        (((this.state.totalTime * 10) / this.state.km) % 3600) /
-                        60
-                      ).toFixed(0)
-                    : (
-                        (((this.state.totalTime * 10) / this.state.km) % 3600) /
-                        60
-                      ).toFixed(0)}
-                  :
-                  {(
-                    (((this.state.totalTime * 10) / this.state.km) % 3600) %
-                    60
-                  ).toFixed(0) < 10
-                    ? "0" +
-                      (
-                        (((this.state.totalTime * 10) / this.state.km) % 3600) %
-                        60
-                      ).toFixed(0)
-                    : (
-                        (((this.state.totalTime * 10) / this.state.km) % 3600) %
-                        60
-                      ).toFixed(0)}
-                </td>
-              </tr>
-              <tr>
-                <td>21.097km</td>
-                <td>
-                  {Math.floor(
-                    (this.state.totalTime * 21.097) / this.state.km / 3600
-                  ) < 10
-                    ? "0" +
-                      Math.floor(
-                        (this.state.totalTime * 21.097) / this.state.km / 3600
-                      )
-                    : Math.floor(
-                        (this.state.totalTime * 21.097) / this.state.km / 3600
-                      )}
-                  :
-                  {(
-                    (((this.state.totalTime * 21.097) / this.state.km) % 3600) /
-                    60
-                  ).toFixed(0) < 10
-                    ? "0" +
-                      (
-                        (((this.state.totalTime * 21.097) / this.state.km) %
-                          3600) /
-                        60
-                      ).toFixed(0)
-                    : (
-                        (((this.state.totalTime * 21.097) / this.state.km) %
-                          3600) /
-                        60
-                      ).toFixed(0)}
-                  :
-                  {(
-                    (((this.state.totalTime * 21.097) / this.state.km) % 3600) %
-                    60
-                  ).toFixed(0) < 10
-                    ? "0" +
-                      (
-                        (((this.state.totalTime * 21.097) / this.state.km) %
-                          3600) %
-                        60
-                      ).toFixed(0)
-                    : (
-                        (((this.state.totalTime * 21.097) / this.state.km) %
-                          3600) %
-                        60
-                      ).toFixed(0)}
-                </td>
-              </tr>
-              <tr>
-                <td>42.195km</td>
-                <td>
-                  {Math.floor(
-                    (this.state.totalTime * 42.195) / this.state.km / 3600
-                  ) < 10
-                    ? "0" +
-                      Math.floor(
-                        (this.state.totalTime * 42.195) / this.state.km / 3600
-                      )
-                    : Math.floor(
-                        (this.state.totalTime * 42.195) / this.state.km / 3600
-                      )}
-                  :
-                  {(
-                    (((this.state.totalTime * 42.195) / this.state.km) % 3600) /
-                    60
-                  ).toFixed(0) < 10
-                    ? "0" +
-                      (
-                        (((this.state.totalTime * 42.195) / this.state.km) %
-                          3600) /
-                        60
-                      ).toFixed(0)
-                    : (
-                        (((this.state.totalTime * 42.195) / this.state.km) %
-                          3600) /
-                        60
-                      ).toFixed(0)}
-                  :
-                  {(
-                    (((this.state.totalTime * 42.195) / this.state.km) % 3600) %
-                    60
-                  ).toFixed(0) < 10
-                    ? "0" +
-                      (
-                        (((this.state.totalTime * 42.195) / this.state.km) %
-                          3600) %
-                        60
-                      ).toFixed(0)
-                    : (
-                        (((this.state.totalTime * 42.195) / this.state.km) %
-                          3600) %
-                        60
-                      ).toFixed(0)}
-                </td>
-              </tr>
+              <tbody>
+                <tr>
+                  <th>Dystans</th>
+                  <th>Przewidywany czas na mecie</th>
+                </tr>
+                <tr>
+                  <td>1km</td>
+                  <td>
+                    {Math.floor(this.state.totalTime / this.state.km / 3600) <
+                    10
+                      ? "0" +
+                        Math.floor(this.state.totalTime / this.state.km / 3600)
+                      : Math.floor(this.state.totalTime / this.state.km / 3600)}
+                    :
+                    {(
+                      ((this.state.totalTime / this.state.km) % 3600) /
+                      60
+                    ).toFixed(0) < 10
+                      ? "0" +
+                        (
+                          ((this.state.totalTime / this.state.km) % 3600) /
+                          60
+                        ).toFixed(0)
+                      : (
+                          ((this.state.totalTime / this.state.km) % 3600) /
+                          60
+                        ).toFixed(0)}
+                    :
+                    {(
+                      ((this.state.totalTime / this.state.km) % 3600) %
+                      60
+                    ).toFixed(0) < 10
+                      ? "0" +
+                        (
+                          ((this.state.totalTime / this.state.km) % 3600) %
+                          60
+                        ).toFixed(0)
+                      : (
+                          ((this.state.totalTime / this.state.km) % 3600) %
+                          60
+                        ).toFixed(0)}
+                  </td>
+                </tr>
+                <tr>
+                  <td>3km</td>
+                  <td>
+                    {Math.floor(
+                      (this.state.totalTime * 3) / this.state.km / 3600
+                    ) < 10
+                      ? "0" +
+                        Math.floor(
+                          (this.state.totalTime * 3) / this.state.km / 3600
+                        )
+                      : Math.floor(
+                          (this.state.totalTime * 3) / this.state.km / 3600
+                        )}
+                    :
+                    {(
+                      (((this.state.totalTime * 3) / this.state.km) % 3600) /
+                      60
+                    ).toFixed(0) < 10
+                      ? "0" +
+                        (
+                          (((this.state.totalTime * 3) / this.state.km) %
+                            3600) /
+                          60
+                        ).toFixed(0)
+                      : (
+                          (((this.state.totalTime * 3) / this.state.km) %
+                            3600) /
+                          60
+                        ).toFixed(0)}
+                    :
+                    {(
+                      (((this.state.totalTime * 3) / this.state.km) % 3600) %
+                      60
+                    ).toFixed(0) < 10
+                      ? "0" +
+                        (
+                          (((this.state.totalTime * 3) / this.state.km) %
+                            3600) %
+                          60
+                        ).toFixed(0)
+                      : (
+                          (((this.state.totalTime * 3) / this.state.km) %
+                            3600) %
+                          60
+                        ).toFixed(0)}
+                  </td>
+                </tr>
+                <tr>
+                  <td>5km</td>
+                  <td>
+                    {Math.floor(
+                      (this.state.totalTime * 5) / this.state.km / 3600
+                    ) < 10
+                      ? "0" +
+                        Math.floor(
+                          (this.state.totalTime * 5) / this.state.km / 3600
+                        )
+                      : Math.floor(
+                          (this.state.totalTime * 5) / this.state.km / 3600
+                        )}
+                    :
+                    {(
+                      (((this.state.totalTime * 5) / this.state.km) % 3600) /
+                      60
+                    ).toFixed(0) < 10
+                      ? "0" +
+                        (
+                          (((this.state.totalTime * 5) / this.state.km) %
+                            3600) /
+                          60
+                        ).toFixed(0)
+                      : (
+                          (((this.state.totalTime * 5) / this.state.km) %
+                            3600) /
+                          60
+                        ).toFixed(0)}
+                    :
+                    {(
+                      (((this.state.totalTime * 5) / this.state.km) % 3600) %
+                      60
+                    ).toFixed(0) < 10
+                      ? "0" +
+                        (
+                          (((this.state.totalTime * 5) / this.state.km) %
+                            3600) %
+                          60
+                        ).toFixed(0)
+                      : (
+                          (((this.state.totalTime * 5) / this.state.km) %
+                            3600) %
+                          60
+                        ).toFixed(0)}
+                  </td>
+                </tr>
+                <tr>
+                  <td>10km</td>
+                  <td>
+                    {Math.floor(
+                      (this.state.totalTime * 10) / this.state.km / 3600
+                    ) < 10
+                      ? "0" +
+                        Math.floor(
+                          (this.state.totalTime * 10) / this.state.km / 3600
+                        )
+                      : Math.floor(
+                          (this.state.totalTime * 10) / this.state.km / 3600
+                        )}
+                    :
+                    {(
+                      (((this.state.totalTime * 10) / this.state.km) % 3600) /
+                      60
+                    ).toFixed(0) < 10
+                      ? "0" +
+                        (
+                          (((this.state.totalTime * 10) / this.state.km) %
+                            3600) /
+                          60
+                        ).toFixed(0)
+                      : (
+                          (((this.state.totalTime * 10) / this.state.km) %
+                            3600) /
+                          60
+                        ).toFixed(0)}
+                    :
+                    {(
+                      (((this.state.totalTime * 10) / this.state.km) % 3600) %
+                      60
+                    ).toFixed(0) < 10
+                      ? "0" +
+                        (
+                          (((this.state.totalTime * 10) / this.state.km) %
+                            3600) %
+                          60
+                        ).toFixed(0)
+                      : (
+                          (((this.state.totalTime * 10) / this.state.km) %
+                            3600) %
+                          60
+                        ).toFixed(0)}
+                  </td>
+                </tr>
+                <tr>
+                  <td>21.097km</td>
+                  <td>
+                    {Math.floor(
+                      (this.state.totalTime * 21.097) / this.state.km / 3600
+                    ) < 10
+                      ? "0" +
+                        Math.floor(
+                          (this.state.totalTime * 21.097) / this.state.km / 3600
+                        )
+                      : Math.floor(
+                          (this.state.totalTime * 21.097) / this.state.km / 3600
+                        )}
+                    :
+                    {(
+                      (((this.state.totalTime * 21.097) / this.state.km) %
+                        3600) /
+                      60
+                    ).toFixed(0) < 10
+                      ? "0" +
+                        (
+                          (((this.state.totalTime * 21.097) / this.state.km) %
+                            3600) /
+                          60
+                        ).toFixed(0)
+                      : (
+                          (((this.state.totalTime * 21.097) / this.state.km) %
+                            3600) /
+                          60
+                        ).toFixed(0)}
+                    :
+                    {(
+                      (((this.state.totalTime * 21.097) / this.state.km) %
+                        3600) %
+                      60
+                    ).toFixed(0) < 10
+                      ? "0" +
+                        (
+                          (((this.state.totalTime * 21.097) / this.state.km) %
+                            3600) %
+                          60
+                        ).toFixed(0)
+                      : (
+                          (((this.state.totalTime * 21.097) / this.state.km) %
+                            3600) %
+                          60
+                        ).toFixed(0)}
+                  </td>
+                </tr>
+                <tr>
+                  <td>42.195km</td>
+                  <td>
+                    {Math.floor(
+                      (this.state.totalTime * 42.195) / this.state.km / 3600
+                    ) < 10
+                      ? "0" +
+                        Math.floor(
+                          (this.state.totalTime * 42.195) / this.state.km / 3600
+                        )
+                      : Math.floor(
+                          (this.state.totalTime * 42.195) / this.state.km / 3600
+                        )}
+                    :
+                    {(
+                      (((this.state.totalTime * 42.195) / this.state.km) %
+                        3600) /
+                      60
+                    ).toFixed(0) < 10
+                      ? "0" +
+                        (
+                          (((this.state.totalTime * 42.195) / this.state.km) %
+                            3600) /
+                          60
+                        ).toFixed(0)
+                      : (
+                          (((this.state.totalTime * 42.195) / this.state.km) %
+                            3600) /
+                          60
+                        ).toFixed(0)}
+                    :
+                    {(
+                      (((this.state.totalTime * 42.195) / this.state.km) %
+                        3600) %
+                      60
+                    ).toFixed(0) < 10
+                      ? "0" +
+                        (
+                          (((this.state.totalTime * 42.195) / this.state.km) %
+                            3600) %
+                          60
+                        ).toFixed(0)
+                      : (
+                          (((this.state.totalTime * 42.195) / this.state.km) %
+                            3600) %
+                          60
+                        ).toFixed(0)}
+                  </td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>

@@ -5,8 +5,9 @@ import Home from "./pages/Home.js";
 import BMI from "./pages/BMI.js";
 import Calculator from "./pages/Calculator.js";
 import PaceConverter from "./pages/PaceConverter.js";
-import Cytaty from "./pages/Cytaty.js";
+import Quotes from "./pages/Quotes.js";
 import Quiz from "./pages/Quiz.js";
+import TrainingPlan from "./pages/TrainingPlan.js";
 import ResponsiveNavigation from "./components/ResponsiveNavigation";
 import "./styles/App.css";
 import "./styles/calculator.css";
@@ -45,6 +46,11 @@ function App() {
       path: "/quiz",
       icon: "fas fa-atlas",
     },
+    {
+      text: "Plan treningowy",
+      path: "/planTreningowy",
+      icon: "fas fa-dumbbell",
+    },
   ];
 
   return (
@@ -62,8 +68,9 @@ function App() {
         <Calculator path="/kalkulator-tempa-biegu" />
         <PaceConverter path="/przelicznik" />
         <BMI path="/bmi" />
-        <Cytaty path="/cytaty" />
+        <Quotes path="/cytaty" />
         <Quiz path="/quiz" />
+        <TrainingPlan path="/planTreningowy" />
       </Router>
     </div>
   );
