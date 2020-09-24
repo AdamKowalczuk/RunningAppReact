@@ -104,7 +104,7 @@ export default class TrainingPlan extends Component {
         value={day.text}
         onClick={(e) => this.handleClickDone(e, day.number)}
       >
-        <p>{day.number}</p>
+        <p>{day.done ? "" : day.number}</p>
         <p>{day.text}</p>
       </div>
     ));

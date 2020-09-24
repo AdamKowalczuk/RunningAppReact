@@ -81,12 +81,3 @@
     margin-top: 50%;
   }
 }
-.training-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10vh;
-  margin-right: 20vw;
-  margin-left: 20vw;
-}

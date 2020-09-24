@@ -50,4 +50,23 @@
   .grid-container p {
     margin: 0;
   }
+  .input-container {
+    width: 80% !important;
+  }
+  .training-container {
+    margin-right: 0vw !important;
+  }
+}
+.training-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+  margin-left: 20vw;
+  margin-right: 20vh;
+}
+.done,
+.day {
+  overflow: hidden;
 }
