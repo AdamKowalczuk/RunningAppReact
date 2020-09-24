@@ -42,8 +42,9 @@ export default class TrainingPlan extends Component {
     this.init();
   }
   init() {
-    localStorage.clear();
-    let days = localStorage.getItem("days");
+    // localStorage.clear();
+
+    let days = JSON.parse(localStorage.getItem("days"));
     console.log(days);
     if (days === null) {
       this.setState({
@@ -51,7 +52,7 @@ export default class TrainingPlan extends Component {
       });
     } else {
       this.setState({
-        day: localStorage.getItem("days"),
+        day: days,
       });
     }
   }
@@ -71,35 +72,37 @@ export default class TrainingPlan extends Component {
     day.text = this.state.newTraining;
     day.number = this.state.newDay;
     days[this.state.newDay - 1] = day;
-    // days[this.state.newDay - 1] = day.number;
     this.setState({
       day: days,
     });
-    // localStorage.setItem("day_number", this.state.newDay);
-    // localStorage.setItem("day_text", days[this.state.newDay - 1].text);
-    // localStorage.setItem("day_done", days[this.state.newDay - 1].done);
-    // localStorage.setItem("days", this.state.day);
-    // let value=[];
-    // value[this.state.newDay - 1]=prompt()
-    // localStorage.setItem("days", JSON.stringify(names));
 
-    localStorage.setItem("days", JSON.stringify(days));
+    window.localStorage.setItem("days", JSON.stringify(days));
   };
-  handleClickDone = (e) => {
-    if (e.currentTarget.className === "day") {
-      e.currentTarget.className = "done";
+  handleClickDone = (e, number) => {
+    let days = [...this.state.day];
+    let day = days[number - 1];
+    if (day.done === true) {
+      day.done = false;
+      // e.currentTarget.className = "day";
     } else {
-      e.currentTarget.className = "day";
+      day.done = true;
+      // e.currentTarget.className = "done";
     }
+    days[number - 1] = day;
+    this.setState({
+      day: days,
+    });
+
+    window.localStorage.setItem("days", JSON.stringify(days));
   };
 
   render() {
-    let days = this.state.day.map((day, id) => (
+    let days = this.state.day.map((day) => (
       <div
-        className="day"
+        className={day.done ? "done" : "day"}
         key={day.number}
         value={day.text}
-        onClick={(e) => this.handleClickDone(e)}
+        onClick={(e) => this.handleClickDone(e, day.number)}
       >
         <p>{day.number}</p>
         <p>{day.text}</p>
