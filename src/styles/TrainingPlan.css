@@ -33,7 +33,7 @@
   color: white;
   text-align: center;
   background-image: url("/images/completed2.svg");
-  background-size: contain;
+  background-size: cover;
 }
 @media screen and (max-width: 759px) {
   .day {
@@ -56,6 +56,37 @@
   .training-container {
     margin-right: 0vw !important;
   }
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  .hidden {
+    visibility: hidden;
+    display: none;
+  }
+  .hidden2 {
+    width: 100% !important;
+  }
 }
 .training-container {
   display: flex;
@@ -66,7 +97,17 @@
   margin-left: 20vw;
   margin-right: 20vh;
 }
-.done,
-.day {
-  overflow: hidden;
+.tooltip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tooltiptext {
+  visibility: hidden;
+  background-color: #13e2ca !important;
+  color: #0b1930 !important;
+}
+.hidden2 {
+  width: 0;
 }

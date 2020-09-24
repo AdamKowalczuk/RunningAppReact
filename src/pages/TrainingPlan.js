@@ -83,10 +83,8 @@ export default class TrainingPlan extends Component {
     let day = days[number - 1];
     if (day.done === true) {
       day.done = false;
-      // e.currentTarget.className = "day";
     } else {
       day.done = true;
-      // e.currentTarget.className = "done";
     }
     days[number - 1] = day;
     this.setState({
@@ -104,8 +102,28 @@ export default class TrainingPlan extends Component {
         value={day.text}
         onClick={(e) => this.handleClickDone(e, day.number)}
       >
-        <p>{day.done ? "" : day.number}</p>
-        <p>{day.text}</p>
+        <div className="tooltip">
+          {day.done === true
+            ? ""
+            : //  <p className="hidden">{day.text}</p>
+              [
+                day.text === "" ? (
+                  day.number
+                ) : (
+                  <div>
+                    <p className="hidden">{day.text}</p>
+                    <img
+                      src="/images/magnifier.svg"
+                      className="hidden2"
+                      alt="magnifier"
+                    ></img>
+                  </div>
+                ),
+              ]}
+
+          <span className="tooltiptext">{day.text}</span>
+        </div>
+        {/* <p>{day.text}</p> */}
       </div>
     ));
     return (
