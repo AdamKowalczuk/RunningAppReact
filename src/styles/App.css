@@ -85,3 +85,6 @@ h5 {
   height: 200px;
   margin: 0 auto;
 }
+.responsive-toolbar li:hover {
+  cursor: pointer;
+}

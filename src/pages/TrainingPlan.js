@@ -38,7 +38,23 @@ export default class TrainingPlan extends Component {
     newTraining: "",
     newDay: "",
   };
-
+  componentDidMount() {
+    this.init();
+  }
+  init() {
+    localStorage.clear();
+    let days = localStorage.getItem("days");
+    console.log(days);
+    if (days === null) {
+      this.setState({
+        day: this.state.day,
+      });
+    } else {
+      this.setState({
+        day: localStorage.getItem("days"),
+      });
+    }
+  }
   handleChangeTraining = (e) => {
     this.setState({
       newTraining: e.target.value,
@@ -50,20 +66,24 @@ export default class TrainingPlan extends Component {
     });
   };
   handleSubmit = () => {
-    const newValue = (this.state.day[this.state.newDay - 1] = {
-      text: this.state.newTraining,
-      number: this.state.newDay,
-    });
-
-    //const newItem=this.state.day[this.state.newDay - 1];
-    // const newValue = {
-    //   text: this.state.newTraining,
-    //   number: this.state.newDay,
-    // };
+    let days = [...this.state.day];
+    let day = days[this.state.newDay - 1];
+    day.text = this.state.newTraining;
+    day.number = this.state.newDay;
+    days[this.state.newDay - 1] = day;
+    // days[this.state.newDay - 1] = day.number;
     this.setState({
-      text: newValue.text,
+      day: days,
     });
-    //localStorage.setItem("color", "red");
+    // localStorage.setItem("day_number", this.state.newDay);
+    // localStorage.setItem("day_text", days[this.state.newDay - 1].text);
+    // localStorage.setItem("day_done", days[this.state.newDay - 1].done);
+    // localStorage.setItem("days", this.state.day);
+    // let value=[];
+    // value[this.state.newDay - 1]=prompt()
+    // localStorage.setItem("days", JSON.stringify(names));
+
+    localStorage.setItem("days", JSON.stringify(days));
   };
   handleClickDone = (e) => {
     if (e.currentTarget.className === "day") {
@@ -74,7 +94,7 @@ export default class TrainingPlan extends Component {
   };
 
   render() {
-    const days = this.state.day.map((day) => (
+    let days = this.state.day.map((day, id) => (
       <div
         className="day"
         key={day.number}

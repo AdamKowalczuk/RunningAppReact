@@ -9,6 +9,7 @@
   transition: border 0.3s ease-out, color 0.3s ease-out,
     background 0.3s ease-out;
   text-transform: uppercase;
+  outline: none;
 }
 .btn-green {
   color: #13e2ca;
